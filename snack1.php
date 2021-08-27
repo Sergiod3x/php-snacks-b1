@@ -75,29 +75,6 @@ while(current($partite)){
                 echo "Accesso negato";
             }
 
-            // Var_dump(strlen($name)) ;
-
-
-
-
-            // $text = "A very long wooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooord. and something";
-            // $torf = $_GET["torf"];
-            // if($torf === "true"){
-            //     $torf = true;
-            // } else{
-            //     $torf= false;
-            // }
-            // $newtext = wordwrap($text, 3, "\n", $torf);
-
-            // echo "$newtext\n";
-
-            
-            // echo "<br/> $torf";
-
-            // $array = ["casa",5, "maiale"];
-
-            // Var_dump($array);
-
 
         ?>
 
@@ -175,10 +152,57 @@ while(current($partite)){
 ?>
     
 <hr>
+
+<?php
+
+    $alunni = [
+        [
+            'nome'=>'Carlo',
+            'cognome'=>'Rossi',
+            'voti'=>
+            [
+                "italiano"=> 5,
+                "matematica"=> 3,
+                "storia"=> 8 
+            ],
+
+        ],
+        [
+            'nome'=>'Simone',
+            'cognome'=>'Impavido',
+            'voti'=>
+            [
+                "italiano"=> 5,
+                "matematica"=>3,
+                "storia"=>8
+            ],
+
+        ],
+        [
+            'nome'=>'Robero',
+            'cognome'=>'Carli',
+            'voti'=>
+            [
+                "italiano"=>  5 ,
+                "matematica"=> 3 ,
+                "storia"=> 8 
+            ],
+        ]
+    ];
+
+while(current($alunni)){
+        $kk = key($alunni);
+        $mediaVoti = (($alunni[$kk]["voti"]["matematica"])+($alunni[$kk]["voti"]["italiano"])+($alunni[$kk]["voti"]["storia"])/3);
+        echo ($alunni[$kk]["nome"])." - ".($alunni[$kk]["cognome"])." - "."Media Voti:".($mediaVoti).'<br />';
+        next($alunni);
+}
+
+
+?>
     
 </body>
 </html>
-
+<!-- ($alunni[$kk]["voti"]["matematica"]); -->
 
 
 <!-- 
@@ -186,9 +210,9 @@ while(current($partite)){
 
 // $partite = [
 //     [
-//         "casa"=>"Olimpia",
+//         "nome"=>"Olimpia",
 //         "ospite"=>"Cantu",
-//         "casaPunti"=>"60",
+//         "nomePunti"=>"60",
 //         "ospitePunti"=>"55",
 
 //     ],
