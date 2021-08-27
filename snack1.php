@@ -153,6 +153,16 @@ while(current($partite)){
     
 <hr>
 
+
+<!-- 
+Creare un array contenente qualche alunno di un’ipotetica classe.
+Ogni alunno avrà i seguenti dati:
+nome
+cognome
+un array contenente i suoi voti scolastici
+Stampare nome, cognome e la media dei voti di ogni alunno.
+-->
+
 <?php
 
     $alunni = [
@@ -202,41 +212,3 @@ while(current($alunni)){
     
 </body>
 </html>
-<!-- ($alunni[$kk]["voti"]["matematica"]); -->
-
-
-<!-- 
-// // Tramite la get è possibile decidere se raggruppare i caratteri a gruppi di tre
-
-// $partite = [
-//     [
-//         "nome"=>"Olimpia",
-//         "ospite"=>"Cantu",
-//         "nomePunti"=>"60",
-//         "ospitePunti"=>"55",
-
-//     ],
-//     [
-//         "casa"=>"Virtus Roma",
-//         "ospite"=>"Virtus Bologna",
-//         "casaPunti"=>"40",
-//         "ospitePunti"=>"20",
-
-//     ],
-//     [
-//         "casa"=>"F.C Matera",
-//         "ospite"=>"Inter",
-//         "casaPunti"=>"55",
-//         "ospitePunti"=>"1",
-
-//     ]
-// ]
-
-// for($1 = 0; $1 < count($partite); $i++){
-//     $string = $partite[$i]["casa"].$partite[$i]["ospite"].$partite[$i]["casaPunti"].$partite[$i]["ospitePunti"];
-// }
-
-// echo $string;
-// // Var_dump($array);
-
-// Tramite la get è possibile decidere se raggruppare i caratteri a gruppi di tre -->
